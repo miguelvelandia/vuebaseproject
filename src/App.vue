@@ -1,32 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<el-container>
+  <el-header>
+    <h1>Vue Spa Base Project by Mig</h1>
+  </el-header>
+  <el-container>
+    <el-aside style="width:240px;">
+      <navegationmenu></navegationmenu>
+    </el-aside>
+    <el-container>
+      <el-main>
+        <el-row>
+          <el-col :span="24">
+            <router-view></router-view>
+          </el-col>
+        </el-row>
+      </el-main>
+      <el-footer>© <a target="_blank" href="">{{ 'Desarrollo por Mig ' + new Date().getFullYear() }}</a></el-footer>
+    </el-container>
+  </el-container>
+</el-container>
+
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import navegationmenu from './components/shared/NavegationMenu.vue'
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  components: {
+    navegationmenu
+  },
+ 
+};
+</script>
