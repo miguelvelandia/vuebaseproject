@@ -1,7 +1,7 @@
 <template>
 <el-container>
   <el-header>
-    <h1>Vue Spa Base Project by Mig</h1>
+    <center><h2>Vue Spa Base Project</h2></center>
   </el-header>
   <el-container>
     <el-aside style="width:240px;">
@@ -32,3 +32,11 @@ export default {
  
 };
 </script>
+<style>
+.el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+</style>
